@@ -13,12 +13,13 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
       build-essential \
       nano \
       wget \
+      libffi-dev \
     && rm -rf /var/lib/apt/lists/*
 
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 
 ENV HADOOP_VERSION 3.2.1
-ENV HADOOP_URL https://muug.ca/mirror/apache-dist/hadoop/common/hadoop-3.2.1/hadoop-$HADOOP_VERSION.tar.gz
+ENV HADOOP_URL https://archive.apache.org/dist/hadoop/common/hadoop-$HADOOP_VERSION/hadoop-$HADOOP_VERSION.tar.gz
 
 RUN curl -O https://dist.apache.org/repos/dist/release/hadoop/common/KEYS && gpg --import KEYS && \
     set -x \
