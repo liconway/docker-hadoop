@@ -12,8 +12,10 @@ ADD run.sh /run.sh
 RUN chmod a+x /run.sh
 
 RUN pip3 install jupyter
+
 RUN mkdir -p /training
 WORKDIR /training
+VOLUME /training
 
 EXPOSE 9870
 EXPOSE 8567
