@@ -11,7 +11,7 @@ services:
       - 8567:8567
     volumes:
       - hadoop_namenode:/hadoop/dfs/name
-      - hadoop_training:/training
+      - "${HADOOP_TRAINING_DIR}:/training"
     environment:
       - CLUSTER_NAME=test
     env_file:
@@ -67,4 +67,3 @@ volumes:
   hadoop_namenode:
   hadoop_datanode:
   hadoop_historyserver:
-  hadoop_training:
