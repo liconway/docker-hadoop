@@ -1,6 +1,6 @@
 DOCKER_NETWORK = docker-hadoop_default
 ENV_FILE = hadoop.env
-USER = vahidmostofi
+USER = liconway
 build:
 	docker build -t $(USER)/hadoop-base ./base
 	docker build -t $(USER)/hadoop-namenode ./namenode

@@ -1,4 +1,4 @@
-FROM vahidmostofi/hadoop-base
+FROM liconway/hadoop-base
 
 MAINTAINER Ivan Ermilov <ivan.s.ermilov@gmail.com>
 
